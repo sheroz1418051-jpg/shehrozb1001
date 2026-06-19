@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ableton — MusicHub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <nav class="nav-left">
+        <ul>
+          <li><a href="#">Live</a></li>
+          <li><a href="#">Push</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Packs</a></li>
+        </ul>
+      </nav>
+
+      <div class="logo">Ableton</div>
+
+      <nav class="nav-right">
+        <ul>
+          <li><a class="cta" href="#">Try Live for free</a></li>
+          <li><a href="#">Account</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1 class="hero-title">Ableton</h1>
+        <p class="hero-sub">Make music, perform, and produce with a fast, intuitive workflow.</p>
+        <div class="hero-actions">
+          <button class="btn">Try Live</button>
+          <button class="btn btn-outline">About</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="features container">
+      <div class="grid">
+        <article class="card">
+          <h3>Community</h3>
+          <ul>
+            <li><a href="#">Find Ableton User Groups</a></li>
+            <li><a href="#">Find Certified Training</a></li>
+            <li><a href="#">Become a Certified Trainer</a></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Education</h3>
+          <ul>
+            <li><a href="#">Offers for students & teachers</a></li>
+            <li><a href="#">Offers for institutions</a></li>
+            <li><a href="#">Push | trade-in initiative</a></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Distributors</h3>
+          <ul>
+            <li><a href="#">Find Distributors</a></li>
+            <li><a href="#">Try Push in-store</a></li>
+          </ul>
+        </article>
+
+        <article class="card newsletter">
+          <h3>Sign up to our newsletter</h3>
+          <p>Enter your email to stay up to date with offers, tutorials, and downloads.</p>
+          <form class="newsletter-form" action="#">
+            <input type="email" placeholder="Email address" aria-label="Email address" required>
+            <button class="btn">Sign up</button>
+          </form>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">Archive · Contact Us · Press</div>
+      <div class="footer-col">Legal Info · Privacy Policy</div>
+      <div class="footer-col">Made in Berlin</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

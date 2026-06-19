@@ -1,0 +1,78 @@
+/* Reset & base */
+:root{
+  --bg:#08121f;
+  --surface:#111d2e;
+  --surface-soft:#17283f;
+  --muted:#b8c3d4;
+  --accent-1:#ff8c5d;
+  --accent-2:#ffb877;
+  --text:#f5f8ff;
+  --radius:18px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  color:var(--text);
+  background:radial-gradient(circle at top left, rgba(255,140,93,0.14), transparent 28%),
+             linear-gradient(180deg,#08121f 0%,#0d1a2f 52%,#08121f 100%);
+  -webkit-font-smoothing:antialiased;
+}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+/* Header */
+.site-header{background:rgba(8,18,31,0.84);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,0.08);}
+.header-inner{display:flex;align-items:center;gap:20px;height:84px;position:relative}
+.nav-left ul,.nav-right ul{display:flex;gap:8px;align-items:center;list-style:none;margin:0;padding:0}
+.nav-left a,.nav-right a{color:var(--text);text-decoration:none;padding:8px 10px;border-radius:10px;font-weight:500;transition:background .2s ease,color .2s ease}
+.nav-left a:hover,.nav-right a:hover{background:rgba(255,255,255,0.12);color:#fff}
+.logo{position:absolute;left:50%;transform:translateX(-50%);font-weight:700;font-size:22px;color:#f8fbff;letter-spacing:0.04em}
+.nav-right{margin-left:auto}
+.nav-right .cta{background:linear-gradient(135deg,var(--accent-1),var(--accent-2));color:#08121f;padding:8px 14px;border-radius:10px;box-shadow:0 14px 28px rgba(255,140,93,0.18)}
+
+/* Hero */
+.hero{min-height:88vh;padding:0;display:flex;align-items:center;position:relative;background-image:url("Img/background.jpg");background-size:cover;background-position:center;background-repeat:no-repeat;}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,16,34,0.55),rgba(7,16,34,0.15));}
+.hero-inner{position:relative;text-align:center;padding:80px 20px;width:100%;max-width:760px;margin:0 auto}
+.hero-title{font-size:96px;line-height:0.9;margin:0;font-weight:800;color:#fff;text-shadow:0 20px 35px rgba(0,0,0,0.24)}
+.hero-sub{color:rgba(255,255,255,0.85);font-size:20px;margin:20px auto 32px;max-width:620px}
+.hero-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn{background:linear-gradient(135deg,var(--accent-1),var(--accent-2));border:none;color:#fff;padding:12px 22px;border-radius:999px;cursor:pointer;font-weight:600;box-shadow:0 12px 26px rgba(15,23,36,0.12);transition:transform .18s ease,box-shadow .18s ease}
+.btn:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(15,23,36,0.16)}
+.btn-outline{background:transparent;border:1px solid rgba(15,23,36,0.08);color:var(--text)}
+
+/* Features grid */
+.features{padding:48px 0}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.card{background:rgba(15,28,47,0.94);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius);padding:24px;box-shadow:0 18px 40px rgba(0,0,0,0.22)}
+.card h3{margin:0 0 14px;font-size:18px;color:#fff}
+.card ul{margin:0;padding:0;list-style:none}
+.card li{margin:10px 0}
+.card a{color:var(--muted);text-decoration:none;transition:color .2s ease}
+.card a:hover{color:var(--text)}
+.newsletter .newsletter-form{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.newsletter input[type="email"]{flex:1;min-width:180px;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.05);color:var(--text)}
+.newsletter input[type="email"]::placeholder{color:rgba(255,255,255,0.55)}
+
+/* Footer */
+.site-footer{padding:28px 0;border-top:1px solid #f1f1f1}
+.footer-grid{display:flex;gap:20px;align-items:center;justify-content:space-between}
+.footer-col{color:var(--muted);font-size:14px}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero-title{font-size:56px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .logo{font-size:20px}
+}
+@media (max-width:600px){
+  .header-inner{height:72px}
+  .nav-left{display:none}
+  .nav-right ul{gap:6px}
+  .hero{padding:48px 0}
+  .hero-title{font-size:44px}
+  .grid{grid-template-columns:1fr}
+  .footer-grid{flex-direction:column;gap:8px;text-align:center}
+}
+
